@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Website Development & Conversion Strategy | MD Astra</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffddbb",
+                        "on-primary-fixed-variant": "#4b2fa6",
+                        "inverse-surface": "#312f37",
+                        "outline": "#797584",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb868",
+                        "surface-variant": "#e6e0eb",
+                        "on-secondary-container": "#3c298b",
+                        "on-primary-container": "#e9e1ff",
+                        "surface-bright": "#fdf7ff",
+                        "outline-variant": "#cac4d5",
+                        "inverse-primary": "#cbbeff",
+                        "on-secondary-fixed": "#1c0062",
+                        "secondary": "#604fb0",
+                        "surface-container": "#f1ecf6",
+                        "secondary-fixed": "#e6deff",
+                        "background": "#fdf7ff",
+                        "tertiary": "#724400",
+                        "surface-container-high": "#ece6f1",
+                        "on-secondary-fixed-variant": "#483697",
+                        "on-tertiary-container": "#ffe0c2",
+                        "on-background": "#1c1b22",
+                        "primary-container": "#6b52c8",
+                        "surface": "#fdf7ff",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#935900",
+                        "primary-fixed-dim": "#cbbeff",
+                        "on-tertiary-fixed-variant": "#673d00",
+                        "secondary-container": "#a998ff",
+                        "on-tertiary-fixed": "#2b1700",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f7f1fc",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#ddd8e2",
+                        "primary": "#5238ae",
+                        "on-surface": "#1c1b22",
+                        "on-primary-fixed": "#1e0060",
+                        "surface-container-highest": "#e6e0eb",
+                        "secondary-fixed-dim": "#cabeff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#6349bf",
+                        "primary-fixed": "#e7deff",
+                        "inverse-on-surface": "#f4eff9",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#484553",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "22px",
+                        "section-v": "90px",
+                        "section-h": "72px",
+                        "container-max": "1200px",
+                        "stack-lg": "56px",
+                        "stack-sm": "12px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Newsreader"],
+                        "h1": ["Newsreader"],
+                        "nav-link": ["Manrope"],
+                        "body-sm": ["Manrope"],
+                        "h3": ["Manrope"],
+                        "body": ["DM Sans"],
+                        "label-caps": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "h2": ["40px", { "lineHeight": "1.22", "fontWeight": "700" }],
+                        "h1": ["54px", { "lineHeight": "1.12", "fontWeight": "700" }],
+                        "nav-link": ["14px", { "lineHeight": "1.0", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "1.72", "fontWeight": "400" }],
+                        "h3": ["17px", { "lineHeight": "1.35", "fontWeight": "600" }],
+                        "body": ["16px", { "lineHeight": "1.8", "fontWeight": "400" }],
+                        "label-caps": ["11px", { "lineHeight": "1.0", "letterSpacing": "2.5px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- Contact Info Top Bar -->
+<div class="w-full bg-[#4A3899] text-white py-2 px-6">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center font-body-sm">
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span>
+                    info@mdastra.com
+                </span>
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">call</span>
+                    +1 (984) 374-9646
+                </span>
+</div>
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                    Working hours: 9:00 - 6:00 Monday - Friday
+                </span>
+</div>
+</div>
+</div>
+<!-- TopNavBar -->
+<header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200/50 shadow-[0_18px_52px_-15px_rgba(107,82,200,0.09)]">
+<nav class="flex justify-between items-center w-full max-w-[1200px] mx-auto px-6 h-20">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-bold text-slate-900 font-h1 flex items-center" href="/">
+<img alt="MD Astra Logo" class="h-28 md:h-32 w-auto object-contain" src="./assets/logo.png"/>
+</a>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 font-nav-link text-nav-link hover:text-[#6B52C8] transition-colors" href="/">Home</a>
+<a class="text-slate-600 font-nav-link text-nav-link hover:text-[#6B52C8] transition-colors" href="aboutus.html">About Us</a>
+<div class="relative group">
+    <a class="text-slate-600 font-nav-link text-nav-link hover:text-[#6B52C8] transition-colors flex items-center gap-1 cursor-pointer" href="#services">
+        Services <span class="material-symbols-outlined text-[16px] group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+    </a>
+    <div class="absolute top-full left-0 mt-4 w-64 bg-white rounded-lg shadow-[0_18px_52px_-15px_rgba(107,82,200,0.15)] border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden z-50">
+        <div class="absolute -top-4 left-0 w-full h-4"></div>
+        <a href="service_seo.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Local SEO</a>
+        <a href="service_webdev.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Website Development</a>
+        <a href="service_gmb.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Google Business Profile</a>
+        <a href="service_content.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Content Marketing</a>
+        <a href="service_social.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Social Media Marketing</a>
+        <a href="service_google_ads.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Google Ads</a>
+    </div>
+</div>
+<div class="relative group">
+    <a class="text-slate-600 font-nav-link text-nav-link hover:text-[#6B52C8] transition-colors flex items-center gap-1 cursor-pointer" href="#industries">
+        Industries <span class="material-symbols-outlined text-[16px] group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+    </a>
+    <div class="absolute top-full left-0 mt-4 w-56 bg-white rounded-lg shadow-[0_18px_52px_-15px_rgba(107,82,200,0.15)] border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden z-50">
+        <div class="absolute -top-4 left-0 w-full h-4"></div>
+        <a href="scratch_ecommerce.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Ecommerce</a>
+        <a href="scratch_education.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Education &amp; Coaching</a>
+        <a href="scratch_fashion.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Fashion &amp; Lifestyle</a>
+        <a href="scratch_healthcare.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Healthcare</a>
+        <a href="scratch_legal.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Legal Services</a>
+        <a href="scratch_localservice.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Local Services</a>
+        <a href="scratch_realestate.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Real Estate</a>
+        <a href="scratch_restaurant.html" class="px-4 py-3 text-sm font-nav-link text-slate-600 hover:bg-purple-50 hover:text-[#6B52C8] transition-colors border-b border-slate-50 last:border-0">Restaurants</a>
+    </div>
+</div>
+<a class="text-slate-600 font-nav-link text-nav-link hover:text-[#6B52C8] transition-colors" href="contact.html">Contact Us</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="contact.html" class="bg-[#6B52C8] text-white px-6 py-3 rounded-full font-nav-link text-nav-link hover:opacity-80 active:scale-95 transition-all duration-300 inline-flex items-center justify-center">Get Started</a>
+</div>
+</nav>
+</header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[750px] flex items-center overflow-hidden bg-surface py-section-v">
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img src="./assets/Images/SEO/seo1.jpg" alt="Local SEO Hero Background" class="w-full h-full object-cover"/>
+                <div class="absolute inset-0 bg-primary-fixed/90 mix-blend-multiply"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-container/95 via-primary-container/60 to-transparent"></div>
+            </div>
+            <div class="relative z-10 max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-16 items-center w-full">
+                <div class="flex flex-col gap-stack-md">
+                    <div class="inline-flex flex-wrap items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur border border-white/30 text-white font-label-caps text-[10px] md:text-xs uppercase tracking-widest shadow-sm w-fit">
+                        <span class="w-2 h-2 rounded-full bg-white mr-3 animate-pulse shadow-[0_0_8px_rgba(255,255,255,0.8)]"></span>
+                        Built for North Carolina Businesses
+                    </div>
+                    <h1 class="font-h1 text-h1 text-white drop-shadow-md">Websites Built to Convert, Scale &amp; Support Growth.</h1>
+                    <p class="font-body text-body text-white/90 max-w-lg text-lg drop-shadow">Website Development &amp; Conversion Strategy Partner.</p>
+                    <p class="font-body-sm text-body-sm text-white/80 max-w-lg drop-shadow">MD Astra designs and develops high-performance websites for North Carolina businesses that need more than a digital brochure. Our websites are engineered to support sales teams, generate qualified leads, and scale with business growth. We build conversion-ready digital foundations for long-term success.</p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button class="bg-white text-primary-container px-8 py-4 rounded-full font-h3 text-h3 hover:bg-surface-variant transition-all shadow-xl active:scale-95">Book a Free Website Strategy Call</button>
+                        <a class="border-2 border-white text-white px-8 py-4 rounded-full font-h3 text-h3 hover:bg-white/10 transition-all active:scale-95 flex items-center gap-2 backdrop-blur-sm" href="tel:+1 (984) 374-9646">
+                            <span class="material-symbols-outlined text-xl" data-icon="call">call</span>
+                            Contact US: +1 (984) 374-9646
+                        </a>
+                    </div>
+                </div>
+                <!-- Website Performance Dashboard Widget -->
+                <div class="relative">
+                    <div class="bg-white/95 backdrop-blur-md p-8 rounded-[20px] border border-outline-variant shadow-[0_18px_52px_-15px_rgba(107,82,200,0.2)] flex flex-col gap-6">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <h3 class="font-h3 text-h3 text-on-surface">Conversion Metrics</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">Post-Launch Performance</p>
+                            </div>
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold font-h3">+180% Leads</span>
+                        </div>
+                        <div class="h-48 flex items-end gap-2 px-2">
+                            <div class="bg-primary-container/20 w-full h-[20%] rounded-t-sm"></div>
+                            <div class="bg-primary-container/30 w-full h-[30%] rounded-t-sm"></div>
+                            <div class="bg-primary-container/40 w-full h-[40%] rounded-t-sm"></div>
+                            <div class="bg-primary-container/60 w-full h-[65%] rounded-t-sm"></div>
+                            <div class="bg-primary-container w-full h-[95%] rounded-t-sm"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 bg-surface-container rounded-xl">
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">Site Speed</p>
+                                <p class="font-h2 text-h3 text-primary">0.8s</p>
+                            </div>
+                            <div class="p-4 bg-surface-container rounded-xl">
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">Bounce Rate</p>
+                                <p class="font-h2 text-h3 text-primary">-42%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-tertiary-fixed text-on-tertiary-fixed p-4 rounded-xl shadow-lg font-h3 text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-lg" data-icon="rocket_launch">rocket_launch</span>
+                        High-Performance Builds
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Section -->
+        <section class="relative py-section-v text-white overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="./assets/Images/SEO/seo2.jpg" alt="SEO Results Background" class="w-full h-full object-cover blur-[2px]"/>
+                <div class="absolute inset-0 bg-primary-container/85 mix-blend-multiply"></div>
+            </div>
+            <div class="relative z-10 max-w-[1200px] mx-auto px-6">
+                <div class="flex flex-col items-center text-center mb-16 gap-stack-sm">
+                    <span class="font-label-caps text-label-caps text-primary-fixed">CASE STUDY SECTION</span>
+                    <h2 class="font-h2 text-h2 text-white drop-shadow">Proven Website Development Results</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-[24px] bg-white/10 backdrop-blur-md border border-white/20 hover:shadow-xl hover:bg-white/20 transition-all text-white">
+                        <div class="flex items-center gap-2 mb-4 text-primary-fixed font-bold">
+                            <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span> Heritage Goods
+                        </div>
+                        <p class="font-body text-white/90 mb-4">Redesigned e-commerce experience leading to a 150% increase in online sales and reduced bounce rate.</p>
+                        <div class="h-1 bg-white/20 rounded-full w-full">
+                            <div class="h-1 bg-primary-fixed rounded-full w-[65%]"></div>
+                        </div>
+                    </div>
+                    <div class="p-8 rounded-[24px] bg-white/10 backdrop-blur-md border border-white/20 hover:shadow-xl hover:bg-white/20 transition-all text-white">
+                        <div class="flex items-center gap-2 mb-4 text-primary-fixed font-bold">
+                            <span class="material-symbols-outlined" data-icon="web">web</span> Coastal Apparel
+                        </div>
+                        <p class="font-body text-white/90 mb-4">Custom web architecture improved mobile engagement by 200% and streamlined the checkout process.</p>
+                        <div class="h-1 bg-white/20 rounded-full w-full">
+                            <div class="h-1 bg-primary-fixed rounded-full w-[85%]"></div>
+                        </div>
+                    </div>
+                    <div class="p-8 rounded-[24px] bg-white/10 backdrop-blur-md border border-white/20 hover:shadow-xl hover:bg-white/20 transition-all text-white">
+                        <div class="flex items-center gap-2 mb-4 text-primary-fixed font-bold">
+                            <span class="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span>
+                            Triangle Health Partners
+                        </div>
+                        <p class="font-body text-white/90 mb-4">Modernized patient portal and mobile-first design increased appointment bookings by 180%.</p>
+                        <div class="h-1 bg-white/20 rounded-full w-full">
+                            <div class="h-1 bg-primary-fixed rounded-full w-[75%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Build Section -->
+        <section class="bg-surface-container py-section-v">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <div class="text-center mb-16 gap-stack-sm flex flex-col items-center">
+                    <span class="font-label-caps text-label-caps text-primary">WHAT WE BUILD</span>
+                    <h2 class="font-h2 text-h2 text-on-surface mt-2">Website Development Services That Drive Results</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-8 rounded-[24px] border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-primary-container text-white rounded-xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-2xl" data-icon="design_services">design_services</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-on-surface mb-4">Conversion-Focused Website Design</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">UI/UX strategy tailored to buyers</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">Clear messaging aligned with intent</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">Trust signals &amp; social proof</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">Mobile-first, responsive layouts</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="bg-white p-8 rounded-[24px] border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-primary-container text-white rounded-xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-2xl" data-icon="code">code</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-on-surface mb-4">Custom Website Development</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">Custom-built (no templates)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">SEO-ready architecture</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">Scalable for future growth</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">Secure, fast-loading builds</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="bg-white p-8 rounded-[24px] border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-primary-container text-white rounded-xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-2xl" data-icon="ads_click">ads_click</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-on-surface mb-4">Landing Pages for Lead Gen</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">High-converting landing pages</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">Built for Google Ads &amp; LinkedIn</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">Clear CTAs for consultations</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="bg-white p-8 rounded-[24px] border border-outline-variant shadow-sm hover:shadow-md transition-shadow md:col-span-1 lg:col-span-1">
+                        <div class="w-12 h-12 bg-primary-container text-white rounded-xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-2xl" data-icon="published_with_changes">published_with_changes</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-on-surface mb-4">Website Redesign &amp; Optimization</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">Audits &amp; performance improvement</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">Conversion rate optimization (CRO)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">Content restructuring for clarity</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="bg-white p-8 rounded-[24px] border border-outline-variant shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1">
+                        <div class="w-12 h-12 bg-primary-container text-white rounded-xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-2xl" data-icon="query_stats">query_stats</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-on-surface mb-4">SEO &amp; Analytics Integration</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">SEO-friendly best practices</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">GA4 &amp; conversion tracking</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check">check</span>
+                                <span class="font-body-sm text-on-surface-variant">CRM-ready lead capture</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Framework Section -->
+        <section class="relative py-section-v overflow-hidden text-white">
+            <div class="absolute inset-0 z-0">
+                <img src="./assets/Images/SEO/seo7.jpg" alt="SEO Framework Background" class="w-full h-full object-cover"/>
+                <div class="absolute inset-0 bg-primary-container/90 mix-blend-multiply"></div>
+            </div>
+            <div class="relative z-10 max-w-[1200px] mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <span class="font-label-caps text-label-caps text-primary-fixed">OUR WEBSITE DEVELOPMENT FRAMEWORK</span>
+                    <h2 class="font-h2 text-h2 text-white mt-2 mb-4 drop-shadow-sm">Strategy-First Websites Built for Growth</h2>
+                    <p class="font-body text-white/80">At MD Astra, website development follows a structured growth framework, ensuring your website supports sales, marketing, and long-term scalability.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-y-12 gap-x-8">
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col items-center md:items-start text-center md:text-left">
+                        <div class="w-16 h-16 bg-white text-primary-container rounded-full flex items-center justify-center font-h2 text-2xl mb-6 shadow-xl border-4 border-primary/20">
+                            1</div>
+                        <h3 class="font-h3 text-h3 text-white mb-2 drop-shadow">Business Discovery &amp; Buyer Alignment</h3>
+                        <p class="font-body-sm text-body-sm text-white/80">We start by understanding your audience, buying cycle, service offerings, and competitive landscape in North Carolina. This ensures your website speaks directly to decision-makers.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col items-center md:items-start text-center md:text-left">
+                        <div class="w-16 h-16 bg-white text-primary-container rounded-full flex items-center justify-center font-h2 text-2xl mb-6 shadow-xl border-4 border-primary/20">
+                            2</div>
+                        <h3 class="font-h3 text-h3 text-white mb-2 drop-shadow">Information Architecture &amp; Messaging</h3>
+                        <p class="font-body-sm text-body-sm text-white/80">We design page structure, navigation, and messaging that clearly communicates value, builds trust, and guides prospects toward conversion.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col items-center md:items-start text-center md:text-left">
+                        <div class="w-16 h-16 bg-white text-primary-container rounded-full flex items-center justify-center font-h2 text-2xl mb-6 shadow-xl border-4 border-primary/20">
+                            3</div>
+                        <h3 class="font-h3 text-h3 text-white mb-2 drop-shadow">UX/UI Design &amp; Development</h3>
+                        <p class="font-body-sm text-body-sm text-white/80">Design and development focus on clarity, speed, accessibility, and conversion—ensuring the site performs across devices and platforms.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col items-center md:items-start text-center md:text-left">
+                        <div class="w-16 h-16 bg-white text-primary-container rounded-full flex items-center justify-center font-h2 text-2xl mb-6 shadow-xl border-4 border-primary/20">
+                            4</div>
+                        <h3 class="font-h3 text-h3 text-white mb-2 drop-shadow">Conversion &amp; Tracking Setup</h3>
+                        <p class="font-body-sm text-body-sm text-white/80">We implement contact forms, lead tracking, CTAs, and analytics so your website becomes a measurable growth asset.</p>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="relative flex flex-col items-center md:items-start text-center md:text-left">
+                        <div class="w-16 h-16 bg-white text-primary-container rounded-full flex items-center justify-center font-h2 text-2xl mb-6 shadow-xl border-4 border-primary/20">
+                            5</div>
+                        <h3 class="font-h3 text-h3 text-white mb-2 drop-shadow">Launch, Optimization &amp; Scalability</h3>
+                        <p class="font-body-sm text-body-sm text-white/80">After launch, we refine performance and ensure your site is scalable for future marketing campaigns and business expansion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Helps Section -->
+        <section class="bg-surface-container-low py-section-v border-t border-outline-variant/30">
+            <div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-h2 text-h2 text-on-surface mb-6">How a High-Performance Website Helps Businesses in North Carolina</h2>
+                    <p class="font-body text-on-surface-variant mb-6">For buyers, your website is often the first sales conversation. A strategic website helps North Carolina companies by:</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+                            <span class="font-body-sm text-on-surface">Establishing credibility and authority instantly</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+                            <span class="font-body-sm text-on-surface">Supporting longer decision-making cycles</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+                            <span class="font-body-sm text-on-surface">Generating qualified inbound leads</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+                            <span class="font-body-sm text-on-surface">Improving conversion rates from ads and organic traffic</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+                            <span class="font-body-sm text-on-surface">Aligning marketing and sales efforts</span>
+                        </li>
+                    </ul>
+                    <div class="bg-primary/5 p-6 rounded-2xl border border-primary/10">
+                        <h4 class="font-h3 text-on-surface mb-2">If your current website:</h4>
+                        <ul class="list-disc list-inside text-on-surface-variant font-body-sm space-y-1 mb-4">
+                            <li>Looks outdated or generic</li>
+                            <li>Doesn’t convert traffic into inquiries</li>
+                            <li>Fails to communicate your value clearly</li>
+                            <li>Isn’t optimized for SEO or paid ads</li>
+                        </ul>
+                        <p class="font-body-sm font-bold text-primary">Then it’s not supporting your growth. MD Astra builds websites that work as sales assets—not just design projects.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-h2 text-h3 text-center mb-8 text-on-surface">Why Businesses Choose MD Astra</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-4xl text-primary mb-3" data-icon="dashboard_customize">dashboard_customize</span>
+                            <span class="font-bold text-on-surface mb-2">Messaging &amp; UX</span>
+                            <p class="text-xs text-on-surface-variant">Built specifically for decision-makers and longer buying cycles.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-4xl text-primary mb-3" data-icon="speed">speed</span>
+                            <span class="font-bold text-on-surface mb-2">Performance Builds</span>
+                            <p class="text-xs text-on-surface-variant">Every site is optimized for speed, clarity, and lead generation.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-4xl text-primary mb-3" data-icon="travel_explore">travel_explore</span>
+                            <span class="font-bold text-on-surface mb-2">SEO-Ready</span>
+                            <p class="text-xs text-on-surface-variant">Built to support SEO, Google Ads, and LinkedIn from day one.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                            <span class="material-symbols-outlined text-4xl text-primary mb-3" data-icon="group">group</span>
+                            <span class="font-bold text-on-surface mb-2">Dedicated Strategists</span>
+                            <p class="text-xs text-on-surface-variant">Hands-on experts guiding strategy and performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="bg-surface-container py-section-v">
+            <div class="max-w-[900px] mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-h2 text-h2 text-on-surface">FAQ</h2>
+                </div>
+                <div class="space-y-4">
+                    <details class="group bg-white rounded-xl shadow-sm overflow-hidden" open="">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <h4 class="font-h3 text-h3 text-on-surface">Do you specialize in B2B website development?</h4>
+                            <span
+                                class="material-symbols-outlined text-primary-container group-open:rotate-180 transition-transform"
+                                data-icon="expand_more">expand_more</span>
+                        </summary>
+                        <div class="p-6 pt-0 font-body text-on-surface-variant">
+                            Yes. MD Astra specializes in website development for service-based and growth-focused businesses across North Carolina.
+                        </div>
+                    </details>
+                    <details class="group bg-white rounded-xl shadow-sm overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <h4 class="font-h3 text-h3 text-on-surface">Can you redesign an existing website?</h4>
+                            <span
+                                class="material-symbols-outlined text-primary-container group-open:rotate-180 transition-transform"
+                                data-icon="expand_more">expand_more</span>
+                        </summary>
+                        <div class="p-6 pt-0 font-body text-on-surface-variant">
+                            Absolutely. We handle website redesigns, performance optimization, and conversion improvements while preserving SEO value.
+                        </div>
+                    </details>
+                    <details class="group bg-white rounded-xl shadow-sm overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <h4 class="font-h3 text-h3 text-on-surface">Are your websites SEO-ready?</h4>
+                            <span
+                                class="material-symbols-outlined text-primary-container group-open:rotate-180 transition-transform"
+                                data-icon="expand_more">expand_more</span>
+                        </summary>
+                        <div class="p-6 pt-0 font-body text-on-surface-variant">
+                            Yes. Every MD Astra website is built with SEO best practices, technical optimization, and clean architecture.
+                        </div>
+                    </details>
+                    <details class="group bg-white rounded-xl shadow-sm overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <h4 class="font-h3 text-h3 text-on-surface">Do you build websites for lead generation?</h4>
+                            <span
+                                class="material-symbols-outlined text-primary-container group-open:rotate-180 transition-transform"
+                                data-icon="expand_more">expand_more</span>
+                        </summary>
+                        <div class="p-6 pt-0 font-body text-on-surface-variant">
+                            Yes. Our websites are designed to generate qualified leads, support ad campaigns, and align with sales processes.
+                        </div>
+                    </details>
+                    <details class="group bg-white rounded-xl shadow-sm overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <h4 class="font-h3 text-h3 text-on-surface">How long does a website project take?</h4>
+                            <span
+                                class="material-symbols-outlined text-primary-container group-open:rotate-180 transition-transform"
+                                data-icon="expand_more">expand_more</span>
+                        </summary>
+                        <div class="p-6 pt-0 font-body text-on-surface-variant">
+                            Most projects take 4–8 weeks, depending on scope, content readiness, and integrations.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="max-w-[1200px] mx-auto px-6 py-section-v">
+            <div class="bg-primary-container rounded-[32px] p-8 md:p-16 relative overflow-hidden shadow-[0_18px_52px_-15px_rgba(107,82,200,0.3)]">
+                <div class="absolute -top-1/2 -right-1/4 w-[600px] h-[600px] bg-white/10 rounded-full blur-[80px]"></div>
+                <div class="relative z-10 text-center mb-10">
+                    <h2 class="font-h1 text-h1 text-white mb-4">Book Your Free Strategy Call</h2>
+                    <p class="font-body text-on-primary-container max-w-xl mx-auto text-lg">Tell us about your business and we'll reach out to craft a custom growth plan.</p>
+                </div>
+                <div class="relative z-10 bg-white rounded-2xl p-2">
+                    <div class="w-full" style="min-height:870px;">
+    <iframe
+        src="https://api.leadconnectorhq.com/widget/form/E9X0wnd5S2qsrjVxJBVV"
+        style="width:100%;height:100%;min-height:870px;border:none;border-radius:8px"
+        id="inline-E9X0wnd5S2qsrjVxJBVV"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Form 5"
+        data-height="854"
+        data-layout-iframe-id="inline-E9X0wnd5S2qsrjVxJBVV"
+        data-form-id="E9X0wnd5S2qsrjVxJBVV"
+        title="Form 5">
+    </iframe>
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Shell -->
+    <!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200">
+<div class="w-full max-w-[1200px] mx-auto px-6 py-12">
+<div class="grid md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<a href="/" class="flex items-center gap-3">
+<img alt="MD Astra Logo" class="h-20 w-auto object-contain" src="./assets/logo.png"/>
+</a>
+<p class="font-body-sm text-body-sm text-slate-500">
+                        Transforming high-revenue ecommerce and service businesses through intelligent automation and creative marketing performance.
+                    </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-h3 text-h3 mb-6">Services</h4>
+<ul class="space-y-3 font-body-sm text-body-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="service_seo.html">Local SEO</a></li>
+<li><a class="hover:text-primary transition-colors" href="service_webdev.html">Website Development</a></li>
+<li><a class="hover:text-primary transition-colors" href="service_gmb.html">Google Business Profile</a></li>
+<li><a class="hover:text-primary transition-colors" href="service_content.html">Content Marketing</a></li>
+<li><a class="hover:text-primary transition-colors" href="service_social.html">Social Media Marketing</a></li>
+<li><a class="hover:text-primary transition-colors" href="service_google_ads.html">Google Ads</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-h3 text-h3 mb-6">Industries</h4>
+<ul class="space-y-3 font-body-sm text-body-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Healthcare</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Real Estate</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Law Firms</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Luxury Retail</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-h3 text-h3 mb-6">Newsletter</h4>
+<p class="font-body-sm text-body-sm text-slate-500 mb-4">Get the latest growth strategies delivered to your inbox.</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-white border-slate-200 rounded-lg px-4 py-2 text-sm focus:ring-primary focus:border-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg hover:opacity-90">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6 font-body-sm text-slate-400">
+<p>© 2024 MD Astra. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+
+</html>
