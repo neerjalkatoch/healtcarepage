@@ -124,9 +124,10 @@
             backdrop-filter: blur(14px);
         }
     
-        /* Icon Hover Animations */
+        
+        /* Enhanced Icon Hover Animations */
         .material-symbols-outlined {
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease, background-color 0.3s ease;
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease, text-shadow 0.3s ease;
             display: inline-block;
         }
         a:hover .material-symbols-outlined, 
@@ -134,7 +135,9 @@
         .group:hover .material-symbols-outlined,
         .service-card:hover .material-symbols-outlined,
         .hover-trigger:hover .material-symbols-outlined {
-            transform: scale(1.15) translateY(-2px);
+            transform: scale(1.2) rotate(5deg) translateY(-2px);
+            text-shadow: 0 4px 12px rgba(107, 82, 200, 0.3);
+            color: #6B52C8;
         }
     </style>
 </head>
